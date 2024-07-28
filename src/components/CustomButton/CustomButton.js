@@ -32,6 +32,12 @@ const styles=StyleSheet.create(
             backgroundColor:'lightblue',
             
         },
+
+        cont_secondary:{
+            color:"lightblue",
+            borderColor:'lightblue',
+            borderWidth:2,
+        },
         cont_tertiary:{
             
             // backgroundColor:'gray',
@@ -39,12 +45,18 @@ const styles=StyleSheet.create(
         },
         text:{
                 fontWeight:'bold',
+            // color:"lightblue",
+
                  
 
         },
 
         text_primary:{
             color:'black',
+
+        },
+        text_secondary:{
+            color:'blue',
 
         },
         text_tertiary:{
