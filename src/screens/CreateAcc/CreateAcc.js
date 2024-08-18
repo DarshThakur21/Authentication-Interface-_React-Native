@@ -5,6 +5,7 @@ import CustomeInput from '../../components/CustomeInput';
 // import { useState } from 'react';
 import CustomButton from '../../components/CustomButton';
 import SocialsigninButton from '../../components/SocialsigninButton/SocialsigninButton';
+import { useNavigation } from '@react-navigation/native';
 // import Signin from '../Signin';
 
 const CreateAcc = () => {
@@ -13,10 +14,14 @@ const CreateAcc = () => {
     const [email, setemail] = useState('');
     const [confirmpass, setconfirmpass] = useState('');
     
+    const navigation=useNavigation();
 
     const onpresspolicy=()=>{
         
-        console.warn("Meta")
+        const url = 'https://www.google.com'; 
+    Linking.openURL(url).catch(err => console.error("Failed to open URL:", err));
+      
+        // console.warn("Meta")
     }
     const onpresstclink=()=>{
         const url = 'https://www.google.com'; // Replace with your desired URL
@@ -26,10 +31,11 @@ const CreateAcc = () => {
     }
         const onregisterpress = () => {
 
+            navigation.navigate('ConfirmEmail');
     }
 
     const onsigninpress=()=>{
-        
+        navigation.navigate('Signin');
     }
 
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Linking,View, Text, Image, SafeAreaView, StyleSheet, useWindowDimensions, ScrollView } from 'react-native'
+import { useNavigation } from '@react-navigation/native';
 import react, { useState } from 'react';
 import CustomeInput from '../../components/CustomeInput';
 // import { useState } from 'react';
@@ -7,15 +8,18 @@ import CustomButton from '../../components/CustomButton';
 
 const Confirmemailscreen = () => {
     const [code, setcode] = useState('')
+    const navigation=useNavigation();
    
     const confirmcode=()=>{
+        navigation.navigate('HomeScreen');
 
     }
     const resendcode=()=>{
+        console.warn('its gonna resend code');
 
     }
     const onsigninpress=()=>{
-
+            navigation.navigate('Signin');
     }
 
 

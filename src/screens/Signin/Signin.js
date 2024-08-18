@@ -1,5 +1,6 @@
 import { View, Text,Image,SafeAreaView,StyleSheet,useWindowDimensions,ScrollView} from 'react-native'
 import React,{useState}  from 'react';
+import { useNavigation } from '@react-navigation/native';
 import logo from '../../../assets/images/Logo_1.png';
 import CustomeInput from '../../components/CustomeInput';
 // import { useState } from 'react';
@@ -8,19 +9,29 @@ import CreateAcc from '../CreateAcc';
 import SocialsigninButton from '../../components/SocialsigninButton/SocialsigninButton';
 
 
+
+
+
 const Signin = () => {
   const [UserName, setUserName] = useState('');
   const [password, setpassword] = useState('');
   const onsigninpress=()=>{
-    console.warn("sign in");
+     
+    navigation.navigate('HomeScreen');
   }
-
+  
   const onforgotpassword=()=>{
-    console.warn("forgot password")
+    // console.warn("forgot password")
+    navigation.navigate('ForgotPassword');
+  }
+  const signuppress=()=>{
+    // console.warn("forgot password")
+    navigation.navigate('Create_Account');
   }
  
 
 
+  const navigation=useNavigation();
   const {height}= useWindowDimensions();
   return (
 
@@ -38,7 +49,7 @@ const Signin = () => {
       
 
 
-        <CustomButton onPress={onforgotpassword} text={"Dont have Account? Sign Up"} type="tertiary" />
+        <CustomButton onPress={signuppress} text={"Dont have Account? Sign Up"} type="tertiary" />
         </View>
         
         

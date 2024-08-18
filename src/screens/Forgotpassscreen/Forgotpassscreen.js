@@ -4,17 +4,24 @@ import react, { useState } from 'react';
 import CustomeInput from '../../components/CustomeInput';
 // import { useState } from 'react';
 import CustomButton from '../../components/CustomButton';
+import { useNavigation } from '@react-navigation/native';
+
 
 const Forgotpassscreen = () => {
     const [username,setusername]=useState('');
     const [code, setcode] = useState('')
+
+    const navigation=useNavigation();
    
   
     const forgotsend=()=>{
+        navigation.navigate('NewPassword');
+
 
     }
   
     const onsigninpress=()=>{
+        navigation.navigate('Signin');
 
     }
 
